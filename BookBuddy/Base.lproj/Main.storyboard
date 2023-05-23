@@ -6,35 +6,34 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Result-->
+        <!--My Bookshelf-->
         <scene sceneID="jlm-yB-mgI">
             <objects>
-                <tableViewController id="uFH-2z-VFG" customClass="MyBooksTableViewController" customModule="FIT3178_W05_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="uFH-2z-VFG" customClass="MyBooksTableViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TL9-Zn-xtE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" textLabel="SYl-hy-VwZ" detailTextLabel="8gd-0p-dZP" rowHeight="329" style="IBUITableViewCellStyleSubtitle" id="o8y-tc-vGr">
-                                <rect key="frame" x="0.0" y="50" width="393" height="329"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" textLabel="SYl-hy-VwZ" detailTextLabel="8gd-0p-dZP" rowHeight="211" style="IBUITableViewCellStyleSubtitle" id="o8y-tc-vGr">
+                                <rect key="frame" x="0.0" y="50" width="393" height="211"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8y-tc-vGr" id="DV6-HP-vdQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="329"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="211"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SYl-hy-VwZ">
-                                            <rect key="frame" x="20" y="149" width="25" height="14.333333333333334"/>
+                                            <rect key="frame" x="20" y="90" width="25" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8gd-0p-dZP">
-                                            <rect key="frame" x="19.999999999999996" y="165.33333333333334" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="19.999999999999996" y="106.33333333333333" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -50,49 +49,18 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Result" id="5jv-uX-Pnw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fCu-zx-sTQ"/>
+                    <navigationItem key="navigationItem" title="My Bookshelf" id="5jv-uX-Pnw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fCu-zx-sTQ">
+                            <connections>
+                                <segue destination="DS8-t1-WBh" kind="show" id="97n-eL-k02"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NI-Q1-l0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3253" y="15"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="x4X-aS-yDS">
-            <objects>
-                <collectionViewController id="xIu-Bi-vFo" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="61j-eD-lZL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5p5-n7-n6h">
-                            <size key="itemSize" width="393" height="280"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gBS-jW-4nW">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ekh-rP-vCL">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="393" height="280"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="xIu-Bi-vFo" id="GaP-1R-PKK"/>
-                            <outlet property="delegate" destination="xIu-Bi-vFo" id="OAc-g4-1bV"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MSI-59-Z7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4733.5877862595416" y="68.309859154929583"/>
+            <point key="canvasLocation" x="2238.9312977099235" y="14.788732394366198"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LtS-R7-YaO">
@@ -121,7 +89,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Start now"/>
                                 <connections>
-                                    <segue destination="DS8-t1-WBh" kind="show" id="hNz-lo-G2v"/>
+                                    <segue destination="uFH-2z-VFG" kind="show" id="NN5-3p-ab6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,7 +105,7 @@
         <!--Search Books-->
         <scene sceneID="eb5-tP-wIp">
             <objects>
-                <tableViewController id="DS8-t1-WBh" customClass="SearchBooksTableViewController" customModule="FIT3178_W05_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="DS8-t1-WBh" customClass="SearchBooksTableViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4O4-Vn-DFZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,9 +134,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="uFH-2z-VFG" kind="show" id="bzV-Oy-86J"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -186,7 +151,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wf-t0-0bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="15"/>
+            <point key="canvasLocation" x="3117" y="15"/>
         </scene>
         <!--Scan ISBN-->
         <scene sceneID="CIP-AE-Gwk">
@@ -229,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lt-eb-UB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="756"/>
+            <point key="canvasLocation" x="3117" y="756"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vFP-wc-w3J">
@@ -290,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUN-YP-8hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3066.4122137404579" y="745.77464788732402"/>
+            <point key="canvasLocation" x="3979" y="756"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fn5-5t-cB4">
