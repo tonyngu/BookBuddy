@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  FIT3178-W05-Lab
+//  BookBuddy
 //
 //  Created by Tony Nguyen on 4/4/2023.
 //

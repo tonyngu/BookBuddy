@@ -1,6 +1,6 @@
 //
 //  HomeViewControlller.swift
-//  FIT3178-W05-Lab
+//  BookBuddy
 //
 //  Created by Tony Nguyen on 16/5/2023.
 //

@@ -1,6 +1,6 @@
 //
 //  SearchBooksTableViewController.swift
-//  FIT3178-W05-Lab
+//  BookBuddy
 //
 //  Created by Tony Nguyen on 5/4/2023.
 //

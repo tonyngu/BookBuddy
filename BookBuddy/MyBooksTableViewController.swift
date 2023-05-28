@@ -1,6 +1,6 @@
 //
 //  MyBooksTableViewController.swift
-//  FIT3178-W05-Lab
+//  BookBuddy
 //
 //  Created by Tony Nguyen on 5/4/2023.
 //
@@ -20,11 +20,11 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener {
         // Reload the tableView to reflect the changes
         tableView.reloadData()
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_BOOK)
         
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
@@ -37,19 +37,19 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener {
         databaseController?.addListener(listener: self)
         
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         databaseController?.removeListener(listener: self)
-        }
-
-
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    
+    
+    // Uncomment the following line to preserve selection between presentations
+    // self.clearsSelectionOnViewWillAppear = false
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem
     
     
     // MARK: - Table view data source
@@ -110,14 +110,20 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "bookDataSegue" {
+            
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+                let book = allBooks[indexPath.row]
+                let destination = segue.destination as! BookDetailViewController
+                destination.chosenBook = book
+            }
+        }
+    }
 }
