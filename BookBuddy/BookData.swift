@@ -16,6 +16,8 @@ class BookData: NSObject, Decodable {
     var publicationDate: String?
     var bookDescription: String?
     var imageURL: String?
+    var pageCount: String?
+
     
     //use to track image download
 //    var image: UIImage?
@@ -33,7 +35,9 @@ class BookData: NSObject, Decodable {
         case authors
         case industryIdentifiers
         case imageLinks
-//        case imageURL = "smallThumbnail"
+        case pageCount = "pageCount"
+
+
     }
     
     private enum ImageKeys: String, CodingKey {
@@ -65,7 +69,8 @@ class BookData: NSObject, Decodable {
             publisher = try? bookContainer.decode(String.self, forKey: .publisher)
             publicationDate = try? bookContainer.decode(String.self, forKey: .publicationDate)
             bookDescription = try? bookContainer.decode(String.self, forKey: .bookDescription)
-//            imageURL = try? bookContainer.decode(String.self, forKey: imageURL)
+            pageCount = try? bookContainer.decode(String.self, forKey: .pageCount)
+
 
         // Get the image links container for the thumbnail
         let imageContainer = try? bookContainer.nestedContainer(keyedBy:

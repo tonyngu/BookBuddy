@@ -7,21 +7,14 @@
 
 import UIKit
 
-enum EpisodeListError: Error {
-    case invalidServerResponse
-    case invalidShowURL
-    case invalidEpisodeImageURL
-}
 
 class BookDetailViewController: UIViewController {
     @IBOutlet weak var overviewDescriptionView: UILabel!
     @IBOutlet weak var overviewTitileView: UILabel!
     @IBOutlet weak var overviewAuthorView: UILabel!
-
-    
+    @IBOutlet weak var overviewPageCount: UILabel!
     
     @IBOutlet weak var BookCoverView: UIImageView!
-    
     
     var chosenBook: Book?
     
@@ -33,6 +26,7 @@ class BookDetailViewController: UIViewController {
             overviewDescriptionView.text = book.bookDescription
             overviewTitileView.text = book.title
             overviewAuthorView.text = book.authors
+            overviewPageCount.text = book.pageCount
 
             
 

@@ -20,8 +20,7 @@ class SearchBooksTableViewController: UITableViewController, UISearchBarDelegate
     
     let CELL_BOOK = "bookCell"
     let REQUEST_STRING = "https://www.googleapis.com/books/v1/volumes?q="
-//    let REQUEST_STRING = "https://openlibrary.org/works/"
-//    let REQUEST_STRING = "https://api2.isbndb.com/book/"
+
 
     
     var newBooks = [BookData]()
@@ -60,7 +59,6 @@ class SearchBooksTableViewController: UITableViewController, UISearchBarDelegate
         var searchURLComponents = URLComponents()
         searchURLComponents.scheme = "https"
         searchURLComponents.host = "www.googleapis.com"
-//        searchURLComponents.host = "api2.isbndb.com"
         searchURLComponents.path = "/books/v1/volumes"
         searchURLComponents.queryItems = [
             URLQueryItem(name: "maxResults", value: "\(MAX_ITEMS_PER_REQUEST)"), URLQueryItem(name: "startIndex", value: "\(currentRequestIndex * MAX_ITEMS_PER_REQUEST)"),

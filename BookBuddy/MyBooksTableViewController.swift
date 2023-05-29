@@ -43,14 +43,7 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener {
         databaseController?.removeListener(listener: self)
     }
     
-    
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    
+       
     
     // MARK: - Table view data source
     
@@ -71,6 +64,7 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener {
         let book = allBooks[indexPath.row]
         cell.textLabel?.text = book.title
         cell.detailTextLabel?.text = book.authors
+//        cell.detailTextLabel?.text = book.pageCount
         
         return cell
     }
