@@ -23,6 +23,7 @@ extension Book {
     @NSManaged public var publicationDate: String?
     @NSManaged public var publisher: String?
     @NSManaged public var title: String?
+    
 
 }
 

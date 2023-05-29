@@ -17,6 +17,10 @@ class BookData: NSObject, Decodable {
     var bookDescription: String?
     var imageURL: String?
     
+    //use to track image download
+//    var image: UIImage?
+//    var imageIsDownloading: Bool = false
+    
     private enum RootKeys: String, CodingKey {
         case volumeInfo
     }
@@ -29,11 +33,21 @@ class BookData: NSObject, Decodable {
         case authors
         case industryIdentifiers
         case imageLinks
+//        case imageURL = "smallThumbnail"
     }
     
     private enum ImageKeys: String, CodingKey {
         case smallThumbnail
     }
+    
+//    struct CoverImageUrls: Codable {
+//        var smallThumbnail: String
+//        var thumbnail: String
+//        var small: String
+//        var medium: String
+//        var large: String
+//        var extraLarge: String
+//    }
     
     private struct ISBNCode: Decodable {
         var type: String
@@ -51,6 +65,7 @@ class BookData: NSObject, Decodable {
             publisher = try? bookContainer.decode(String.self, forKey: .publisher)
             publicationDate = try? bookContainer.decode(String.self, forKey: .publicationDate)
             bookDescription = try? bookContainer.decode(String.self, forKey: .bookDescription)
+//            imageURL = try? bookContainer.decode(String.self, forKey: imageURL)
 
         // Get the image links container for the thumbnail
         let imageContainer = try? bookContainer.nestedContainer(keyedBy:
