@@ -44,14 +44,7 @@ class BookData: NSObject, Decodable {
         case smallThumbnail
     }
     
-//    struct CoverImageUrls: Codable {
-//        var smallThumbnail: String
-//        var thumbnail: String
-//        var small: String
-//        var medium: String
-//        var large: String
-//        var extraLarge: String
-//    }
+
     
     private struct ISBNCode: Decodable {
         var type: String

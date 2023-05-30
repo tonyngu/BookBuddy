@@ -52,7 +52,6 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             let imageURL = book.imageURL
             let config = URLSessionConfiguration.background(withIdentifier: "edu.monash.fit3178.week05")
             let session = URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue())
-            //            let url = URL(string: "https://books.google.com/books?id=zyTCAlFPjgYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api")!
             let url = URL(string: imageURL!)
             let task = session.downloadTask(with: url!)
             task.resume()
@@ -63,19 +62,7 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             
             
         }
-        // Do any additional setup after loading the view.
-        //        BookCoverView?.image = nil
-        //
-        //        // if there is a cover assosiate with this book
-        //        if let coverImage = chosenBook?.imageURL {
-        //            BookCoverView?.image = coverImage
-        //        }
-        //
-        //        else if chosenBook.imageIsDownloading == false, let imageURL = chosenBook.imageURL?.smallThumbnail {
-        //
-        //        }
-        
-        
+
         
         /*
          // MARK: - Navigation
