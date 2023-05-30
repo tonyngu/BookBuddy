@@ -74,6 +74,11 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
         return book
     }
     
+    func deleteBook(bookData: Book) {
+        persistentContainer.viewContext.delete(bookData)
+    }
+    
+    
     func cleanup() {
         if persistentContainer.viewContext.hasChanges {
             do {

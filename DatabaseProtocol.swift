@@ -16,6 +16,7 @@ protocol DatabaseProtocol: AnyObject {
     func addListener(listener: DatabaseListener)
     func removeListener(listener: DatabaseListener)
     func addBook(bookData: BookData) -> Book
+    func deleteBook(bookData: Book)
     func cleanup()
 }
 
