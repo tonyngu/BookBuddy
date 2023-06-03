@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5616749E2A2B7190008812D5 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5616749D2A2B7190008812D5 /* NotificationViewController.swift */; };
 		5625953529DC79BA00354223 /* SearchBooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5625953429DC79BA00354223 /* SearchBooksTableViewController.swift */; };
 		5625953729DC79D300354223 /* MyBooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5625953629DC79D300354223 /* MyBooksTableViewController.swift */; };
 		563D4EED2A1D003A00A21B3D /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563D4EEC2A1D003A00A21B3D /* BookDetailViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5616749D2A2B7190008812D5 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		5625953429DC79BA00354223 /* SearchBooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksTableViewController.swift; sourceTree = "<group>"; };
 		5625953629DC79D300354223 /* MyBooksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksTableViewController.swift; sourceTree = "<group>"; };
 		563D4EEC2A1D003A00A21B3D /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				563D4EEC2A1D003A00A21B3D /* BookDetailViewController.swift */,
 				5667B9932A1F34F800990628 /* ProgressPickerViewController.swift */,
 				566306DA2A28BDEC0089AD51 /* ViewController.swift */,
+				5616749D2A2B7190008812D5 /* NotificationViewController.swift */,
 			);
 			path = BookBuddy;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				5625953729DC79D300354223 /* MyBooksTableViewController.swift in Sources */,
 				5667B9942A1F34F800990628 /* ProgressPickerViewController.swift in Sources */,
 				567678CE29DE9642007C869E /* MulticastDelegate.swift in Sources */,
+				5616749E2A2B7190008812D5 /* NotificationViewController.swift in Sources */,
 				563DC91429DBEB65000FD3BF /* AppDelegate.swift in Sources */,
 				563DC91629DBEB65000FD3BF /* SceneDelegate.swift in Sources */,
 				563D4EED2A1D003A00A21B3D /* BookDetailViewController.swift in Sources */,

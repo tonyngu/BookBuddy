@@ -12,10 +12,22 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var databaseController: DatabaseProtocol?
+//    var window: UIWindow?
+
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         databaseController = CoreDataController()
+        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//        window?.backgroundColor = .systemBackground
+//
+//        let navigationController = UINavigationController(rootViewController: ViewController())
+//        window?.rootViewController = navigationController
+//        navigationController.navigationBar.prefersLargeTitles = true
+        
         return true
     }
 
