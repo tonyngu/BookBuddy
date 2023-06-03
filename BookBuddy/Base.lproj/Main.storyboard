@@ -10,7 +10,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Bookshelf-->
+        <!--Set your own goal!-->
+        <scene sceneID="Rbv-NW-67j">
+            <objects>
+                <viewController id="vM0-1z-ccQ" customClass="NotificationViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZHC-Wd-n4o">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="atE-XY-yUa">
+                                <rect key="frame" x="0.0" y="316" width="393" height="220"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When to remind me?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GZ-tg-rlm">
+                                <rect key="frame" x="16" y="296" width="158" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input your goal here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEK-7H-n7Q">
+                                <rect key="frame" x="16" y="184" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8p-eJ-jwO">
+                                <rect key="frame" x="159" y="561" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="schedule:" destination="vM0-1z-ccQ" eventType="touchUpInside" id="IWj-6d-SOF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Rw-hQ-bKW">
+                                <rect key="frame" x="16" y="221" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oCS-5Z-R6G"/>
+                        <color key="backgroundColor" name="DetailViewBackGround"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set your own goal!" id="xI3-bS-ywl"/>
+                    <connections>
+                        <outlet property="datePicker" destination="atE-XY-yUa" id="T4k-sy-P7d"/>
+                        <outlet property="goalTextField" destination="1Rw-hQ-bKW" id="NSL-12-414"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUc-Gx-YQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149" y="-737"/>
+        </scene>
+        <!--Welcome-->
         <scene sceneID="jlm-yB-mgI">
             <objects>
                 <tableViewController id="uFH-2z-VFG" customClass="MyBooksTableViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,15 +77,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="294"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-Lq-j1g">
-                                    <rect key="frame" x="32" y="22" width="71" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-Ss-Gb5">
-                                    <rect key="frame" x="36" y="51" width="320" height="140"/>
+                                    <rect key="frame" x="36" y="24" width="320" height="140"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
@@ -80,11 +128,10 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="My Bookshelf" id="5jv-uX-Pnw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fCu-zx-sTQ">
-                            <color key="tintColor" name="AccentColor"/>
+                    <navigationItem key="navigationItem" title="Welcome" largeTitleDisplayMode="always" id="5jv-uX-Pnw">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="Ldo-9b-Ae6">
                             <connections>
-                                <segue destination="DS8-t1-WBh" kind="show" id="WRQ-s6-XAx"/>
+                                <segue destination="vM0-1z-ccQ" kind="show" id="iZM-V4-cNE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -142,7 +189,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wf-t0-0bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3149" y="-13"/>
+            <point key="canvasLocation" x="3149" y="6"/>
         </scene>
         <!--Info-->
         <scene sceneID="i5R-VJ-9hM">
@@ -231,7 +278,7 @@
                             <constraint firstItem="5p3-7z-uMP" firstAttribute="trailing" secondItem="trs-4m-x1Z" secondAttribute="trailing" constant="35" id="xR9-p1-7p6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Info" id="VxA-Gp-oiA"/>
+                    <navigationItem key="navigationItem" title="Info" largeTitleDisplayMode="never" id="VxA-Gp-oiA"/>
                     <connections>
                         <outlet property="BookCoverView" destination="AXP-2M-VWP" id="xxp-F5-f8s"/>
                         <outlet property="overviewAuthorView" destination="uwH-r4-Ybf" id="ghH-Ek-SSS"/>
@@ -333,6 +380,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Don't know where to find it?"/>
+                                <connections>
+                                    <segue destination="lmr-qZ-sH2" kind="show" id="OyV-K5-8K9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hu5-Nl-iFl"/>
@@ -360,9 +410,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scanning will start automatically" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1J-Ic-Je2">
-                                <rect key="frame" x="97" y="220" width="198" height="17"/>
+                                <rect key="frame" x="97" y="220" width="221" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
@@ -371,9 +421,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Don't know where to find it?"/>
-                                <connections>
-                                    <segue destination="lmr-qZ-sH2" kind="show" id="8Ul-pf-Ia9"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jWA-CQ-ZzZ"/>
@@ -385,18 +432,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lt-eb-UB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4033" y="-13"/>
+            <point key="canvasLocation" x="4083" y="-803"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vFP-wc-w3J">
             <objects>
                 <viewController id="lmr-qZ-sH2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bMD-0u-Fb8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can’t find your ISBN?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZL9-cL-Wqf">
-                                <rect key="frame" x="80" y="50" width="233" height="28"/>
+                                <rect key="frame" x="80" y="205" width="233" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -446,15 +493,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUN-YP-8hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4834" y="-13"/>
+            <point key="canvasLocation" x="5602" y="696"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R3E-bh-qHn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jt1-wJ-s46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ePM-Bo-2sB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Q7-q1-hbw">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0Q7-q1-hbw">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -462,18 +510,15 @@
                         <segue destination="uFH-2z-VFG" kind="relationship" relationship="rootViewController" id="Sfz-NY-dHl"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jt1-wJ-s46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389" y="15"/>
+            <point key="canvasLocation" x="1385" y="-13"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="cKM-Yz-bOJ"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="Image" width="669" height="461"/>
         <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="bell" catalog="system" width="125" height="128"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.7686274509803922" green="0.41568627450980394" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
