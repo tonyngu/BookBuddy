@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUc-Gx-YQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3225" y="807"/>
+            <point key="canvasLocation" x="3149" y="696"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="jlm-yB-mgI">
@@ -75,11 +75,11 @@
                         <color key="backgroundColor" name="DetailViewBackGround"/>
                         <color key="separatorColor" name="DetailViewBackGround"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="nNC-Wf-Eky">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="294"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="334"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-Ss-Gb5">
-                                    <rect key="frame" x="21" y="21" width="350" height="140"/>
+                                    <rect key="frame" x="20" y="15" width="353" height="140"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
@@ -91,12 +91,42 @@
                                         <segue destination="DS8-t1-WBh" kind="show" id="cKM-Yz-bOJ"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVW-Si-NXd">
+                                    <rect key="frame" x="20" y="196" width="353" height="93"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Set a goal">
+                                        <backgroundConfiguration key="background"/>
+                                        <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <segue destination="vM0-1z-ccQ" kind="show" id="ru7-gX-YGd"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" name="DetailViewBackGround"/>
                         </view>
                         <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bookCountCell" id="3lw-vO-cGy" customClass="BookCountTableViewCell" customModule="BookBuddy" customModuleProvider="target">
+                                <rect key="frame" x="20" y="372" width="353" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3lw-vO-cGy" id="j2j-Ir-O0e">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwS-5T-UXY">
+                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" textLabel="SYl-hy-VwZ" detailTextLabel="8gd-0p-dZP" rowHeight="63" style="IBUITableViewCellStyleSubtitle" id="o8y-tc-vGr">
-                                <rect key="frame" x="20" y="332" width="353" height="63"/>
+                                <rect key="frame" x="20" y="415.66666793823242" width="353" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8y-tc-vGr" id="DV6-HP-vdQ">
                                     <rect key="frame" x="0.0" y="0.0" width="353" height="63"/>
@@ -136,6 +166,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bookCount" destination="SwS-5T-UXY" id="C7W-a7-KK7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NI-Q1-l0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wf-t0-0bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3149" y="6"/>
+            <point key="canvasLocation" x="2239" y="-727"/>
         </scene>
         <!--Info-->
         <scene sceneID="i5R-VJ-9hM">
@@ -327,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCp-gf-PmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4004" y="-13"/>
+            <point key="canvasLocation" x="3114" y="-747"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="23G-Gh-PgC">
@@ -483,6 +516,9 @@
             <point key="canvasLocation" x="1385" y="-13"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ru7-gX-YGd"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="Image" width="669" height="461"/>

@@ -9,6 +9,7 @@ import UIKit
 
 class MyBooksTableViewController: UITableViewController, DatabaseListener, UIViewControllerTransitioningDelegate {
     
+    @IBOutlet weak var bookCount: UILabel!
     @IBAction func showAboutButton(_ sender: Any) {
         showBottomCard()
     }
@@ -24,7 +25,11 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
         PresentationControlller(presentedViewController: presented, presenting: presenting)
     }
     
+    let SECTION_BOOK = 0
+    let SECTION_INFO = 1
+    
     let CELL_BOOK = "BookCell"
+    let CELL_INFO = "bookCountCell"
     var allBooks: [Book] = []
     weak var databaseController: DatabaseProtocol?
     
@@ -45,6 +50,7 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             databaseController = appDelegate.databaseController
         }
+        bookCount.text = String(allBooks.count)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +64,7 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
         databaseController?.removeListener(listener: self)
     }
     
-       
+    
     
     // MARK: - Table view data source
     
@@ -73,35 +79,48 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
+        if indexPath.section == SECTION_BOOK {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
+            
+            // Configure the cell...
+            let book = allBooks[indexPath.row]
+            cell.textLabel?.text = book.title
+            cell.detailTextLabel?.text = book.authors
+            return cell
+            
+        } else {
+            
+            let infoCell = tableView.dequeueReusableCell(withIdentifier: "bookCountCell", for:
+                                                            indexPath) as! BookCountTableViewCell
+            infoCell.totalLabel?.text = "\(allBooks.count)"
+            return infoCell
+        }
         
-        // Configure the cell...
-        let book = allBooks[indexPath.row]
-        cell.textLabel?.text = book.title
-        cell.detailTextLabel?.text = book.authors
-//        cell.detailTextLabel?.text = book.pageCount
-        
-        return cell
     }
     
     
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
     
     
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-         let book = allBooks[indexPath.row]
-         self.databaseController?.deleteBook(bookData: book)
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let book = allBooks[indexPath.row]
+            self.databaseController?.deleteBook(bookData: book)
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection
+                                section: Int) -> String? {
+        return "My Collection \(allBooks.count)"
+    }
+    
     
     /*
      // Override to support rearranging the table view.
