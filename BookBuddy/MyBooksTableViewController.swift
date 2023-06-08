@@ -9,7 +9,7 @@ import UIKit
 
 class MyBooksTableViewController: UITableViewController, DatabaseListener, UIViewControllerTransitioningDelegate {
     
-    @IBOutlet weak var bookCount: UILabel!
+
     @IBAction func showAboutButton(_ sender: Any) {
         showBottomCard()
     }
@@ -50,7 +50,6 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             databaseController = appDelegate.databaseController
         }
-        bookCount.text = String(allBooks.count)
     }
     
     override func viewWillAppear(_ animated: Bool) {

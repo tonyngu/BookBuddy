@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Set your own goal!-->
+        <!--Set your own goal-->
         <scene sceneID="Rbv-NW-67j">
             <objects>
                 <viewController id="vM0-1z-ccQ" customClass="NotificationViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,10 +37,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8p-eJ-jwO">
-                                <rect key="frame" x="159" y="561" width="75" height="35"/>
+                                <rect key="frame" x="139" y="561" width="115" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Remind me!"/>
                                 <connections>
                                     <action selector="schedule:" destination="vM0-1z-ccQ" eventType="touchUpInside" id="IWj-6d-SOF"/>
                                 </connections>
@@ -55,7 +55,7 @@
                         <viewLayoutGuide key="safeArea" id="oCS-5Z-R6G"/>
                         <color key="backgroundColor" name="DetailViewBackGround"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Set your own goal!" largeTitleDisplayMode="always" id="xI3-bS-ywl"/>
+                    <navigationItem key="navigationItem" title="Set your own goal" largeTitleDisplayMode="always" id="xI3-bS-ywl"/>
                     <connections>
                         <outlet property="datePicker" destination="atE-XY-yUa" id="T4k-sy-P7d"/>
                         <outlet property="goalTextField" destination="1Rw-hQ-bKW" id="NSL-12-414"/>
@@ -124,6 +124,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="totalLabel" destination="SwS-5T-UXY" id="fQZ-DH-D8x"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" textLabel="SYl-hy-VwZ" detailTextLabel="8gd-0p-dZP" rowHeight="63" style="IBUITableViewCellStyleSubtitle" id="o8y-tc-vGr">
                                 <rect key="frame" x="20" y="415.66666793823242" width="353" height="63"/>
@@ -166,9 +169,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="bookCount" destination="SwS-5T-UXY" id="C7W-a7-KK7"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NI-Q1-l0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Wf-t0-0bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2239" y="-727"/>
+            <point key="canvasLocation" x="3114" y="-13"/>
         </scene>
         <!--Info-->
         <scene sceneID="i5R-VJ-9hM">
@@ -360,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCp-gf-PmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3114" y="-747"/>
+            <point key="canvasLocation" x="3949" y="-13"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="23G-Gh-PgC">
