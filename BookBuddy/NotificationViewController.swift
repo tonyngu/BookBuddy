@@ -16,7 +16,9 @@ class NotificationViewController: UIViewController {
         notificationCenter.getNotificationSettings { (settings) in
             
             DispatchQueue.main.async {
+            
                 let goal = self.goalTextField.text!
+                self.goalTextField.text = self.remindedBookTitle
                 let date = self.datePicker.date
                 
                 if(settings.authorizationStatus == .authorized) {
@@ -65,6 +67,7 @@ class NotificationViewController: UIViewController {
     
     // Create a notification content object
     let notificationCenter = UNUserNotificationCenter.current()
+    var remindedBookTitle: String = ""
     
     override func viewDidLoad() {
         

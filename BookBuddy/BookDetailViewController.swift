@@ -37,6 +37,7 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
     
     @IBOutlet weak var BookCoverView: UIImageView!
     
+
     var chosenBook: Book?
     
     override func viewDidLoad() {
@@ -49,6 +50,7 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             overviewAuthorView.text = book.authors
             overviewPageCount.text = book.pageCount
             
+            //To download image from URL
             let imageURL = book.imageURL
             let config = URLSessionConfiguration.background(withIdentifier: "edu.monash.fit3178.week05")
             let session = URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue())
@@ -62,17 +64,24 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             
             
         }
-
-        
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
     }
+    
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "reminderSegue" {
+            let book = chosenBook
+            let bookName = book!.title
+            let destination = segue.destination as! NotificationViewController
+            destination.remindedBookTitle = bookName!
+        }
+    }
+    
+    
+    
 }

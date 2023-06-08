@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,6 +13,7 @@
         <!--Set your own goal!-->
         <scene sceneID="Rbv-NW-67j">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUc-Gx-YQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="vM0-1z-ccQ" customClass="NotificationViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHC-Wd-n4o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -55,15 +56,14 @@
                         <viewLayoutGuide key="safeArea" id="oCS-5Z-R6G"/>
                         <color key="backgroundColor" name="DetailViewBackGround"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Set your own goal!" id="xI3-bS-ywl"/>
+                    <navigationItem key="navigationItem" title="Set your own goal!" largeTitleDisplayMode="always" id="xI3-bS-ywl"/>
                     <connections>
                         <outlet property="datePicker" destination="atE-XY-yUa" id="T4k-sy-P7d"/>
                         <outlet property="goalTextField" destination="1Rw-hQ-bKW" id="NSL-12-414"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nUc-Gx-YQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3149" y="-737"/>
+            <point key="canvasLocation" x="3225" y="807"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="jlm-yB-mgI">
@@ -78,7 +78,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zY3-Ss-Gb5">
-                                    <rect key="frame" x="36" y="24" width="320" height="140"/>
+                                    <rect key="frame" x="21" y="21" width="350" height="140"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
@@ -129,11 +129,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Welcome" largeTitleDisplayMode="always" id="5jv-uX-Pnw">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="Ldo-9b-Ae6">
-                            <connections>
-                                <segue destination="vM0-1z-ccQ" kind="show" id="iZM-V4-cNE"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="Ldo-9b-Ae6"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NI-Q1-l0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,7 +201,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start reading"/>
                                 <connections>
-                                    <segue destination="Wyn-ix-Qxd" kind="show" identifier="progressSegue" id="xGy-l6-fDr"/>
+                                    <segue destination="vM0-1z-ccQ" kind="show" identifier="reminderSegue" id="lPt-7V-rI4"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trs-4m-x1Z">
@@ -289,39 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6i-9r-SC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2238.9312977099235" y="713.38028169014092"/>
-        </scene>
-        <!--Progress Picker View Controller-->
-        <scene sceneID="au7-9C-rZN">
-            <objects>
-                <viewController id="Wyn-ix-Qxd" customClass="ProgressPickerViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nb3-Av-3Nm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save your progess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-5h-ZnB">
-                                <rect key="frame" x="103" y="280" width="141" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w1-4P-Le0">
-                                <rect key="frame" x="103" y="347" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="uib-Ba-Vwg"/>
-                        <color key="backgroundColor" name="DetailViewBackGround"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2Um-mc-5O7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdl-bc-aDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3149" y="713"/>
+            <point key="canvasLocation" x="2239" y="696"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Lk1-Bp-M7H">
@@ -493,12 +457,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUN-YP-8hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5602" y="696"/>
+            <point key="canvasLocation" x="5750" y="-13"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R3E-bh-qHn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jt1-wJ-s46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ePM-Bo-2sB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0Q7-q1-hbw">
@@ -510,6 +473,7 @@
                         <segue destination="uFH-2z-VFG" kind="relationship" relationship="rootViewController" id="Sfz-NY-dHl"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jt1-wJ-s46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1385" y="-13"/>
         </scene>
