@@ -7,7 +7,22 @@
 
 import UIKit
 
-class MyBooksTableViewController: UITableViewController, DatabaseListener {
+class MyBooksTableViewController: UITableViewController, DatabaseListener, UIViewControllerTransitioningDelegate {
+    
+    @IBAction func showAboutButton(_ sender: Any) {
+        showBottomCard()
+    }
+    
+    func showBottomCard() {
+        let slideVC = BottomCardViewController()
+        slideVC.modalPresentationStyle = .custom
+        slideVC.transitioningDelegate = self
+        self.present(slideVC, animated: true, completion: nil)
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        PresentationControlller(presentedViewController: presented, presenting: presenting)
+    }
     
     let CELL_BOOK = "BookCell"
     var allBooks: [Book] = []

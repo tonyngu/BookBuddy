@@ -13,7 +13,6 @@
         <!--Set your own goal!-->
         <scene sceneID="Rbv-NW-67j">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nUc-Gx-YQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="vM0-1z-ccQ" customClass="NotificationViewController" customModule="BookBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZHC-Wd-n4o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -62,6 +61,7 @@
                         <outlet property="goalTextField" destination="1Rw-hQ-bKW" id="NSL-12-414"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUc-Gx-YQ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3225" y="807"/>
         </scene>
@@ -129,7 +129,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Welcome" largeTitleDisplayMode="always" id="5jv-uX-Pnw">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell" catalog="system" id="Ldo-9b-Ae6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="Ldo-9b-Ae6">
+                            <connections>
+                                <action selector="showAboutButton:" destination="uFH-2z-VFG" id="ngM-zU-HLA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NI-Q1-l0v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -482,7 +486,7 @@
     <resources>
         <image name="Image" width="669" height="461"/>
         <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
-        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.7686274509803922" green="0.41568627450980394" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
