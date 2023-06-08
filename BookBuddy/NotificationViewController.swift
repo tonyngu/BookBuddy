@@ -18,11 +18,11 @@ class NotificationViewController: UIViewController {
             DispatchQueue.main.async {
             
                 let goal = self.goalTextField.text!
-                self.goalTextField.text = self.remindedBookTitle
                 let date = self.datePicker.date
                 
                 if(settings.authorizationStatus == .authorized) {
                     let content = UNMutableNotificationContent()
+                    
                     content.title = "BookBuddy"
                     content.body = goal
                     
@@ -83,6 +83,8 @@ class NotificationViewController: UIViewController {
                 return
             }
         }
+        self.goalTextField.text = self.remindedBookTitle
+        
         
     }
     func formattedDate(date: Date) -> String {

@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSessionDownloadDelegate {
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten:
