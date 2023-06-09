@@ -25,11 +25,7 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
         PresentationControlller(presentedViewController: presented, presenting: presenting)
     }
     
-    let SECTION_BOOK = 0
-    let SECTION_INFO = 1
-    
     let CELL_BOOK = "BookCell"
-    let CELL_INFO = "bookCountCell"
     var allBooks: [Book] = []
     weak var databaseController: DatabaseProtocol?
     
@@ -78,7 +74,6 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == SECTION_BOOK {
             let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
             
             // Configure the cell...
@@ -87,14 +82,6 @@ class MyBooksTableViewController: UITableViewController, DatabaseListener, UIVie
             cell.detailTextLabel?.text = book.authors
             return cell
             
-        } else {
-            
-            let infoCell = tableView.dequeueReusableCell(withIdentifier: "bookCountCell", for:
-                                                            indexPath) as! BookCountTableViewCell
-            infoCell.totalLabel?.text = "\(allBooks.count)"
-            return infoCell
-        }
-        
     }
     
     
