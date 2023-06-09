@@ -19,9 +19,6 @@ class BookData: NSObject, Decodable {
     var pageCount: String?
 
     
-    //use to track image download
-//    var image: UIImage?
-//    var imageIsDownloading: Bool = false
     
     private enum RootKeys: String, CodingKey {
         case volumeInfo

@@ -10,6 +10,7 @@ import UIKit
 
 class SearchBooksTableViewController: UITableViewController, UISearchBarDelegate {
     
+
     // Maximum items can be display with 1 search
     let MAX_ITEMS_PER_REQUEST = 40
     let MAX_REQUESTS = 10
@@ -109,7 +110,7 @@ class SearchBooksTableViewController: UITableViewController, UISearchBarDelegate
         }
         
     }
-    
+
     // Called if the user hits enter or taps the search button after typing in the search field.
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         newBooks.removeAll()
