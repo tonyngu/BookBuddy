@@ -13,7 +13,6 @@ class ISBNViewController: UIViewController, ScannerViewDelegate {
     }
     
     @IBOutlet weak var scanTextField: UITextField!
-    
     @IBOutlet weak var scanBarButton: UIButton!
     let scannerViewController = ScannerViewController()
     override func viewDidLoad() {

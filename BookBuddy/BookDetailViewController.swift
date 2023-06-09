@@ -29,12 +29,13 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
         }
     }
     
-    @IBOutlet weak var overviewDescriptionView: UILabel!
-    @IBOutlet weak var overviewTitileView: UILabel!
-    @IBOutlet weak var overviewAuthorView: UILabel!
+    @IBOutlet weak var DescriptionView: UITextView!
+    @IBOutlet weak var TitleView: UILabel!
+    @IBOutlet weak var AuthorView: UILabel!
     @IBOutlet weak var BookCoverView: UIImageView!
     
-
+//    @IBOutlet weak var DescriptionView: UITextView!
+    
     var chosenBook: Book?
     
     override func viewDidLoad() {
@@ -42,9 +43,9 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
         
         if let book = chosenBook {
             navigationItem.title = book.title
-            overviewDescriptionView.text = book.bookDescription
-            overviewTitileView.text = book.title
-            overviewAuthorView.text = book.authors
+            DescriptionView.text = book.bookDescription
+            TitleView.text = book.title
+            AuthorView.text = book.authors
             
             //To download image from URL
             BookCoverView?.image = nil
@@ -54,20 +55,13 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             let task = session.downloadTask(with: url!)
             task.resume()
             reloadInputViews()
-            
-            
-            
-            
-            
-            
+               
         }
     }
     
     
-    
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.

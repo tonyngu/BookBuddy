@@ -29,7 +29,6 @@
 		56833CFB2A3218D20014653D /* BottomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56833CF82A3218D20014653D /* BottomCardViewController.swift */; };
 		56833CFC2A3218D20014653D /* PresentationControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56833CF92A3218D20014653D /* PresentationControlller.swift */; };
 		56833CFD2A3218D20014653D /* BottomCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56833CFA2A3218D20014653D /* BottomCardView.xib */; };
-		56BE027C2A1337A400F30B75 /* HomeViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE027B2A1337A400F30B75 /* HomeViewControlller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +56,6 @@
 		56833CF82A3218D20014653D /* BottomCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomCardViewController.swift; sourceTree = "<group>"; };
 		56833CF92A3218D20014653D /* PresentationControlller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationControlller.swift; sourceTree = "<group>"; };
 		56833CFA2A3218D20014653D /* BottomCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomCardView.xib; sourceTree = "<group>"; };
-		56BE027B2A1337A400F30B75 /* HomeViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControlller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,16 +97,15 @@
 				563DC91529DBEB65000FD3BF /* SceneDelegate.swift */,
 				563DC91929DBEB65000FD3BF /* Main.storyboard */,
 				563DC91F29DBEB66000FD3BF /* Assets.xcassets */,
+				567678C629DE9586007C869E /* BookDataModel.xcdatamodeld */,
 				563DC92129DBEB66000FD3BF /* LaunchScreen.storyboard */,
 				563DC92429DBEB66000FD3BF /* Info.plist */,
 				563DC92A29DBEF36000FD3BF /* VolumeData.swift */,
 				563DC92C29DBEF53000FD3BF /* BookData.swift */,
 				5625953429DC79BA00354223 /* SearchBooksTableViewController.swift */,
 				5625953629DC79D300354223 /* MyBooksTableViewController.swift */,
-				567678C629DE9586007C869E /* BookDataModel.xcdatamodeld */,
-				56BE027B2A1337A400F30B75 /* HomeViewControlller.swift */,
-				5659A3B42A15DBAB00C61A10 /* ScanerViewController.swift */,
 				563D4EEC2A1D003A00A21B3D /* BookDetailViewController.swift */,
+				5659A3B42A15DBAB00C61A10 /* ScanerViewController.swift */,
 				566306DA2A28BDEC0089AD51 /* ISBNViewController.swift */,
 				5616749D2A2B7190008812D5 /* NotificationViewController.swift */,
 				56833CFA2A3218D20014653D /* BottomCardView.xib */,
@@ -195,7 +192,6 @@
 				566306DB2A28BDEC0089AD51 /* ISBNViewController.swift in Sources */,
 				5625953529DC79BA00354223 /* SearchBooksTableViewController.swift in Sources */,
 				567678D229DE9790007C869E /* CoreDataController.swift in Sources */,
-				56BE027C2A1337A400F30B75 /* HomeViewControlller.swift in Sources */,
 				567678CC29DE95F3007C869E /* Book+CoreDataProperties.swift in Sources */,
 				567678CB29DE95F3007C869E /* Book+CoreDataClass.swift in Sources */,
 				567678C829DE9586007C869E /* BookDataModel.xcdatamodeld in Sources */,
@@ -353,16 +349,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2KTT4256A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookBuddy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning barcode.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,16 +383,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2KTT4256A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookBuddy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to access your camera for scanning barcode.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

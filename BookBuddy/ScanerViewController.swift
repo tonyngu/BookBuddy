@@ -8,15 +8,15 @@
 import AVFoundation
 import UIKit
 
-@objc protocol ScannerViewDelegate: class {
-    @objc func didFindScannedText(text: String)
+protocol ScannerViewDelegate: AnyObject {
+    func didFindScannedText(text: String)
 }
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
-    @objc public weak var delegate: ScannerViewDelegate?
+    public weak var delegate: ScannerViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +72,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         if (captureSession?.isRunning == false) {
             captureSession.startRunning()
+                
         }
     }
     

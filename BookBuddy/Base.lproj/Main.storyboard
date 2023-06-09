@@ -48,7 +48,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oCS-5Z-R6G"/>
-                        <color key="backgroundColor" name="DetailViewBackGround"/>
+                        <color key="backgroundColor" name="BackGround"/>
                         <constraints>
                             <constraint firstItem="atE-XY-yUa" firstAttribute="trailing" secondItem="oCS-5Z-R6G" secondAttribute="trailing" id="3yJ-Am-pIE"/>
                             <constraint firstItem="h8p-eJ-jwO" firstAttribute="leading" secondItem="oCS-5Z-R6G" secondAttribute="leading" constant="16" id="4yr-XN-LXf"/>
@@ -82,7 +82,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="TL9-Zn-xtE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="DetailViewBackGround"/>
+                        <color key="backgroundColor" name="BackGround"/>
                         <color key="separatorColor" name="DetailViewBackGround"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="nNC-Wf-Eky">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="334"/>
@@ -183,7 +183,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4O4-Vn-DFZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="DetailViewBackGround"/>
+                        <color key="backgroundColor" name="BackGround"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" textLabel="5OQ-Nz-MTF" detailTextLabel="yRd-E3-iLa" style="IBUITableViewCellStyleSubtitle" id="gXG-mg-Tq6">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -289,38 +289,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpg-5h-w0S">
-                                <rect key="frame" x="33" y="497" width="327" height="224"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="224" id="Sj4-4n-Y05"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdL-JN-909">
+                                <rect key="frame" x="35" y="513" width="323" height="213"/>
+                                <color key="backgroundColor" name="BackGround"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5p3-7z-uMP"/>
-                        <color key="backgroundColor" name="DetailViewBackGround"/>
+                        <color key="backgroundColor" name="BackGround"/>
                         <constraints>
-                            <constraint firstItem="xpg-5h-w0S" firstAttribute="leading" secondItem="5p3-7z-uMP" secondAttribute="leading" constant="33" id="0cq-ee-JYC"/>
                             <constraint firstItem="hsT-0r-56q" firstAttribute="leading" secondItem="5p3-7z-uMP" secondAttribute="leading" constant="35" id="4RT-f3-BVc"/>
                             <constraint firstItem="5p3-7z-uMP" firstAttribute="trailing" secondItem="hsT-0r-56q" secondAttribute="trailing" constant="35" id="76h-fR-6UT"/>
                             <constraint firstItem="trs-4m-x1Z" firstAttribute="top" secondItem="5p3-7z-uMP" secondAttribute="top" constant="14" id="BQO-1u-eRW"/>
-                            <constraint firstItem="hsT-0r-56q" firstAttribute="top" secondItem="xpg-5h-w0S" secondAttribute="bottom" constant="30" id="IuT-s1-ceV"/>
-                            <constraint firstItem="hsT-0r-56q" firstAttribute="top" secondItem="xpg-5h-w0S" secondAttribute="bottom" constant="30" id="T6N-CL-ccR"/>
-                            <constraint firstItem="xpg-5h-w0S" firstAttribute="centerX" secondItem="trs-4m-x1Z" secondAttribute="centerX" id="s4T-KX-K0M"/>
-                            <constraint firstItem="xpg-5h-w0S" firstAttribute="centerX" secondItem="hsT-0r-56q" secondAttribute="centerX" id="sOH-yf-uNu"/>
+                            <constraint firstItem="hsT-0r-56q" firstAttribute="leading" secondItem="DdL-JN-909" secondAttribute="leading" id="cKm-Q5-0Xl"/>
+                            <constraint firstItem="hsT-0r-56q" firstAttribute="trailing" secondItem="DdL-JN-909" secondAttribute="trailing" id="hbG-cU-UdK"/>
+                            <constraint firstItem="5p3-7z-uMP" firstAttribute="bottom" secondItem="hsT-0r-56q" secondAttribute="bottom" constant="32" id="sFF-77-4u6"/>
+                            <constraint firstItem="DdL-JN-909" firstAttribute="top" secondItem="trs-4m-x1Z" secondAttribute="bottom" constant="73" id="t6A-hk-Nq3"/>
+                            <constraint firstItem="hsT-0r-56q" firstAttribute="top" secondItem="DdL-JN-909" secondAttribute="bottom" constant="25" id="u8Z-aC-g38"/>
                             <constraint firstItem="trs-4m-x1Z" firstAttribute="leading" secondItem="5p3-7z-uMP" secondAttribute="leading" constant="35" id="vrv-Hg-J2U"/>
-                            <constraint firstItem="xpg-5h-w0S" firstAttribute="top" secondItem="trs-4m-x1Z" secondAttribute="bottom" constant="57" id="xNs-N3-0DF"/>
                             <constraint firstItem="5p3-7z-uMP" firstAttribute="trailing" secondItem="trs-4m-x1Z" secondAttribute="trailing" constant="35" id="xR9-p1-7p6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Info" largeTitleDisplayMode="never" id="VxA-Gp-oiA"/>
                     <connections>
+                        <outlet property="AuthorView" destination="uwH-r4-Ybf" id="ghH-Ek-SSS"/>
                         <outlet property="BookCoverView" destination="AXP-2M-VWP" id="xxp-F5-f8s"/>
-                        <outlet property="overviewAuthorView" destination="uwH-r4-Ybf" id="ghH-Ek-SSS"/>
-                        <outlet property="overviewDescriptionView" destination="xpg-5h-w0S" id="O1d-oG-Nhp"/>
-                        <outlet property="overviewTitileView" destination="vR3-ef-2OL" id="691-u2-5RL"/>
+                        <outlet property="DescriptionView" destination="DdL-JN-909" id="2A6-UA-g8q"/>
+                        <outlet property="TitleView" destination="vR3-ef-2OL" id="691-u2-5RL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6i-9r-SC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -378,7 +376,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Irs-Xw-aUe"/>
-                        <color key="backgroundColor" name="DetailViewBackGround"/>
+                        <color key="backgroundColor" name="BackGround"/>
                         <constraints>
                             <constraint firstItem="Pf5-me-0ri" firstAttribute="top" secondItem="bEN-gD-YBd" secondAttribute="bottom" constant="20" id="0tR-ky-6oU"/>
                             <constraint firstItem="xXB-pt-gbA" firstAttribute="top" secondItem="Pf5-me-0ri" secondAttribute="bottom" constant="16" id="3Y9-TJ-Xd9"/>
@@ -447,7 +445,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lPt-7V-rI4"/>
+        <segue reference="ru7-gX-YGd"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
@@ -456,6 +454,9 @@
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.7686274509803922" green="0.41568627450980394" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackGround">
+            <color red="0.87450980392156863" green="0.83137254901960789" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="DetailView">
             <color red="0.0" green="0.5725490196078431" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
