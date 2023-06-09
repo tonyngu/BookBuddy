@@ -15,6 +15,7 @@ class ISBNViewController: UIViewController, ScannerViewDelegate {
     @IBOutlet weak var scanTextField: UITextField!
     @IBOutlet weak var scanBarButton: UIButton!
     let scannerViewController = ScannerViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -22,13 +23,14 @@ class ISBNViewController: UIViewController, ScannerViewDelegate {
     }
 }
 
-
 extension ISBNViewController {
+    
+    // updateUI method trigger when button is push
     private func updateUI() {
 
         scanBarButton.addTarget(self, action: #selector(scanBarTapped), for: .touchUpInside)
     }
-    
+    // send user to scannerViewContrller
     @objc func scanBarTapped() {
         self.navigationController?.pushViewController(scannerViewController, animated: true)
     }
