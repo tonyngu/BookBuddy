@@ -47,12 +47,13 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             overviewAuthorView.text = book.authors
             
             //To download image from URL
-            
+            BookCoverView?.image = nil
             let config = URLSessionConfiguration.background(withIdentifier: "")
             let session = URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue())
             let url = URL(string: book.imageURL!)
             let task = session.downloadTask(with: url!)
             task.resume()
+            reloadInputViews()
             
             
             

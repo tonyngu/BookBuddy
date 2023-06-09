@@ -69,7 +69,7 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
         book.publicationDate = bookData.publicationDate
         book.publisher = bookData.publisher
         book.title = bookData.title
-        book.pageCount = bookData.pageCount
+
         
         return book
     }

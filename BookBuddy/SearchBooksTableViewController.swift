@@ -68,15 +68,7 @@ class SearchBooksTableViewController: UITableViewController, UISearchBarDelegate
             print("Invalid URL.")
             return
         }
-//        guard let queryString = bookName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
-//            print("Query string can't be encoded.")
-//            return
-//        }
-//
-//        guard let requestURL = URL(string: REQUEST_STRING + queryString) else {
-//            print("Invalid URL.")
-//            return
-//        }
+
         
         let urlRequest = URLRequest(url: requestURL)
         
