@@ -34,13 +34,12 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
     @IBOutlet weak var AuthorView: UILabel!
     @IBOutlet weak var BookCoverView: UIImageView!
     
-//    @IBOutlet weak var DescriptionView: UITextView!
-    
     var chosenBook: Book?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Display book data that got passed from MyBooksTableViewController
         if let book = chosenBook {
             navigationItem.title = book.title
             DescriptionView.text = book.bookDescription
@@ -58,7 +57,6 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
                
         }
     }
-    
     
     // MARK: - Navigation
     

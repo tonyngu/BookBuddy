@@ -72,11 +72,7 @@
 		563DC90729DBEB64000FD3BF = {
 			isa = PBXGroup;
 			children = (
-				567678D129DE9790007C869E /* CoreDataController.swift */,
-				567678CF29DE965E007C869E /* DatabaseProtocol.swift */,
-				567678CD29DE9642007C869E /* MulticastDelegate.swift */,
-				567678C929DE95F3007C869E /* Book+CoreDataClass.swift */,
-				567678CA29DE95F3007C869E /* Book+CoreDataProperties.swift */,
+				5642D37B2A3358EF00C61662 /* Database */,
 				563DC91229DBEB65000FD3BF /* BookBuddy */,
 				563DC91129DBEB65000FD3BF /* Products */,
 			);
@@ -113,6 +109,18 @@
 				56833CF92A3218D20014653D /* PresentationControlller.swift */,
 			);
 			path = BookBuddy;
+			sourceTree = "<group>";
+		};
+		5642D37B2A3358EF00C61662 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				567678D129DE9790007C869E /* CoreDataController.swift */,
+				567678CF29DE965E007C869E /* DatabaseProtocol.swift */,
+				567678CD29DE9642007C869E /* MulticastDelegate.swift */,
+				567678C929DE95F3007C869E /* Book+CoreDataClass.swift */,
+				567678CA29DE95F3007C869E /* Book+CoreDataProperties.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

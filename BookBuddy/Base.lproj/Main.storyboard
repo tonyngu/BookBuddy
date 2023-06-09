@@ -119,7 +119,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" name="DetailViewBackGround"/>
+                            <color key="backgroundColor" name="BackGround"/>
                             <constraints>
                                 <constraint firstItem="vVW-Si-NXd" firstAttribute="top" secondItem="zY3-Ss-Gb5" secondAttribute="bottom" constant="38" id="8bk-fz-h9l"/>
                                 <constraint firstItem="zY3-Ss-Gb5" firstAttribute="trailing" secondItem="vVW-Si-NXd" secondAttribute="trailing" id="8iG-jd-JbT"/>

@@ -16,7 +16,7 @@ class BookData: NSObject, Decodable {
     var publicationDate: String?
     var bookDescription: String?
     var imageURL: String?
-    var pageCount: String?
+
 
     
     
@@ -32,8 +32,6 @@ class BookData: NSObject, Decodable {
         case authors
         case industryIdentifiers
         case imageLinks
-        case pageCount = "pageCount"
-
 
     }
     
@@ -59,7 +57,6 @@ class BookData: NSObject, Decodable {
             publisher = try? bookContainer.decode(String.self, forKey: .publisher)
             publicationDate = try? bookContainer.decode(String.self, forKey: .publicationDate)
             bookDescription = try? bookContainer.decode(String.self, forKey: .bookDescription)
-            pageCount = try? bookContainer.decode(String.self, forKey: .pageCount)
 
 
         // Get the image links container for the thumbnail

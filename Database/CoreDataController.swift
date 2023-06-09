@@ -14,6 +14,7 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
     var persistentContainer: NSPersistentContainer
     var allBooksFetchedResultsController: NSFetchedResultsController<Book>?
     
+    // Load presistent container.
     override init() {
         persistentContainer = NSPersistentContainer(name: "BookDataModel")
         persistentContainer.loadPersistentStores() { (description, error) in
@@ -25,6 +26,7 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
         super.init()
     }
     
+    // A method called fetchAllBooks that returns an array of books.
     func fetchAllBooks() -> [Book] {
         if allBooksFetchedResultsController == nil {
             let fetchRequest: NSFetchRequest<Book> = Book.fetchRequest()
@@ -70,7 +72,6 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
         book.publisher = bookData.publisher
         book.title = bookData.title
 
-        
         return book
     }
     
@@ -78,7 +79,7 @@ class CoreDataController: NSObject, NSFetchedResultsControllerDelegate, Database
         persistentContainer.viewContext.delete(bookData)
     }
     
-    
+    //The cleanup step should save the managed object context if there are pending changes. This will always be called when the application is shutting down.
     func cleanup() {
         if persistentContainer.viewContext.hasChanges {
             do {
