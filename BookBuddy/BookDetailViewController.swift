@@ -53,7 +53,6 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             let url = URL(string: book.imageURL!)
             let task = session.downloadTask(with: url!)
             task.resume()
-            reloadInputViews()
                
         }
     }
