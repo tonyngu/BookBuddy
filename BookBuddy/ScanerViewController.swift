@@ -8,15 +8,15 @@
 import AVFoundation
 import UIKit
 
-protocol ScannerViewDelegate: AnyObject {
-    func didFindScannedText(text: String)
+@objc protocol ScannerViewDelegate: class {
+    @objc func didFindScannedText(text: String)
 }
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
-    weak var delegate: ScannerViewDelegate?
+    @objc public weak var delegate: ScannerViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

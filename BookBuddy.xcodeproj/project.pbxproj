@@ -19,7 +19,7 @@
 		563DC92B29DBEF36000FD3BF /* VolumeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DC92A29DBEF36000FD3BF /* VolumeData.swift */; };
 		563DC92D29DBEF53000FD3BF /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DC92C29DBEF53000FD3BF /* BookData.swift */; };
 		5659A3B52A15DBAB00C61A10 /* ScanerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659A3B42A15DBAB00C61A10 /* ScanerViewController.swift */; };
-		566306DB2A28BDEC0089AD51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566306DA2A28BDEC0089AD51 /* ViewController.swift */; };
+		566306DB2A28BDEC0089AD51 /* ISBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566306DA2A28BDEC0089AD51 /* ISBNViewController.swift */; };
 		567678C829DE9586007C869E /* BookDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 567678C629DE9586007C869E /* BookDataModel.xcdatamodeld */; };
 		567678CB29DE95F3007C869E /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567678C929DE95F3007C869E /* Book+CoreDataClass.swift */; };
 		567678CC29DE95F3007C869E /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567678CA29DE95F3007C869E /* Book+CoreDataProperties.swift */; };
@@ -47,7 +47,7 @@
 		563DC92A29DBEF36000FD3BF /* VolumeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeData.swift; sourceTree = "<group>"; };
 		563DC92C29DBEF53000FD3BF /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 		5659A3B42A15DBAB00C61A10 /* ScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanerViewController.swift; sourceTree = "<group>"; };
-		566306DA2A28BDEC0089AD51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		566306DA2A28BDEC0089AD51 /* ISBNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBNViewController.swift; sourceTree = "<group>"; };
 		567678C729DE9586007C869E /* BookDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookDataModel.xcdatamodel; sourceTree = "<group>"; };
 		567678C929DE95F3007C869E /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
 		567678CA29DE95F3007C869E /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				56BE027B2A1337A400F30B75 /* HomeViewControlller.swift */,
 				5659A3B42A15DBAB00C61A10 /* ScanerViewController.swift */,
 				563D4EEC2A1D003A00A21B3D /* BookDetailViewController.swift */,
-				566306DA2A28BDEC0089AD51 /* ViewController.swift */,
+				566306DA2A28BDEC0089AD51 /* ISBNViewController.swift */,
 				5616749D2A2B7190008812D5 /* NotificationViewController.swift */,
 				56833CFA2A3218D20014653D /* BottomCardView.xib */,
 				56833CF82A3218D20014653D /* BottomCardViewController.swift */,
@@ -192,7 +192,7 @@
 			files = (
 				563DC92B29DBEF36000FD3BF /* VolumeData.swift in Sources */,
 				5659A3B52A15DBAB00C61A10 /* ScanerViewController.swift in Sources */,
-				566306DB2A28BDEC0089AD51 /* ViewController.swift in Sources */,
+				566306DB2A28BDEC0089AD51 /* ISBNViewController.swift in Sources */,
 				5625953529DC79BA00354223 /* SearchBooksTableViewController.swift in Sources */,
 				567678D229DE9790007C869E /* CoreDataController.swift in Sources */,
 				56BE027C2A1337A400F30B75 /* HomeViewControlller.swift in Sources */,
