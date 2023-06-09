@@ -19,8 +19,6 @@ class BottomCardViewController: UIViewController {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
         
-//        slideIdicator.roundCorners(.allCorners, radius: 10)
-//        subscribeButton.roundCorners(.allCorners, radius: 10)
     }
     
     override func viewDidLayoutSubviews() {
