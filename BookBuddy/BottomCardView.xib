@@ -19,13 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="418"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0p2-su-JGw">
-                    <rect key="frame" x="35" y="239" width="46" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHR-n5-7UU">
                     <rect key="frame" x="166.66666666666666" y="16" width="60" height="4"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,25 +27,75 @@
                         <constraint firstAttribute="width" constant="60" id="o5T-kF-8Ig"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfP-Ae-Ttp">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfP-Ae-Ttp">
                     <rect key="frame" x="173" y="40" width="46" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="BookBuddy is a simple app to keep track of your reading." translatesAutoresizingMaskIntoConstraints="NO" id="cks-ba-HsW">
+                    <rect key="frame" x="36" y="77" width="320" height="49"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il5-wS-tbI">
+                    <rect key="frame" x="36" y="195" width="312" height="78"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="78" id="baJ-gn-gy9"/>
+                    </constraints>
+                    <string key="text">Building Bar Code Scanner App in Swift
+by Abboskhon Shukurullaev https://levelup.gitconnected.com/building-bar-code-scanner-app-in-swift-1de4ab1e1079</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorials followed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEa-on-xht">
+                    <rect key="frame" x="36" y="166" width="138" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Schedule Local Notifications Swift Xcode Tutorial by Code With Cal https://www.youtube.com/watch?v=qDbbdvTYpVI" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rO0-2I-fE9">
+                    <rect key="frame" x="36" y="296" width="312" height="72"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="BEa-on-xht" firstAttribute="top" secondItem="cks-ba-HsW" secondAttribute="bottom" constant="40" id="0ga-BL-Flh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cks-ba-HsW" secondAttribute="trailing" constant="37" id="8Wi-5j-KuS"/>
+                <constraint firstAttribute="bottom" secondItem="il5-wS-tbI" secondAttribute="bottom" constant="145" id="Aee-xq-gOK"/>
+                <constraint firstAttribute="trailingMargin" secondItem="yfP-Ae-Ttp" secondAttribute="trailing" constant="158" id="TBk-Um-Bz5"/>
+                <constraint firstItem="cks-ba-HsW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="YJC-H8-05r"/>
+                <constraint firstItem="il5-wS-tbI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="bPb-Lf-06J"/>
                 <constraint firstItem="XHR-n5-7UU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="hJN-LN-Eog"/>
+                <constraint firstItem="rO0-2I-fE9" firstAttribute="centerX" secondItem="cks-ba-HsW" secondAttribute="centerX" constant="-4" id="iPO-n6-HCC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="il5-wS-tbI" secondAttribute="trailing" constant="45" id="kaT-wc-XOh"/>
+                <constraint firstItem="rO0-2I-fE9" firstAttribute="top" secondItem="il5-wS-tbI" secondAttribute="bottom" constant="23" id="nyN-EF-mMT"/>
                 <constraint firstItem="XHR-n5-7UU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="p0a-WO-23w"/>
+                <constraint firstItem="rO0-2I-fE9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="qXb-j6-VDj"/>
+                <constraint firstItem="yfP-Ae-Ttp" firstAttribute="top" secondItem="XHR-n5-7UU" secondAttribute="bottom" constant="20" id="t6q-yn-pku"/>
+                <constraint firstItem="BEa-on-xht" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="tRn-Gn-3LD"/>
+                <constraint firstItem="cks-ba-HsW" firstAttribute="top" secondItem="yfP-Ae-Ttp" secondAttribute="bottom" constant="16" id="uJx-OI-zJn"/>
+                <constraint firstItem="yfP-Ae-Ttp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="157" id="ui5-fp-7id"/>
+                <constraint firstItem="rO0-2I-fE9" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-16" id="wdQ-55-BBr"/>
+                <constraint firstItem="il5-wS-tbI" firstAttribute="top" secondItem="BEa-on-xht" secondAttribute="bottom" constant="8" id="x6B-Lc-gXf"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="127.48091603053435" y="-295.07042253521126"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
