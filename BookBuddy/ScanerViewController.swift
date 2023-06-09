@@ -3,7 +3,7 @@
 //  BookBuddy
 //
 //  Created by Tony Nguyen on 18/5/2023.
-//
+//  Tutorial followed: https://levelup.gitconnected.com/building-bar-code-scanner-app-in-swift-1de4ab1e1079
 
 import AVFoundation
 import UIKit

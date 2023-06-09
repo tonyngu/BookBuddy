@@ -3,7 +3,7 @@
 //  BookBuddy
 //
 //  Created by Tony Nguyen on 8/6/2023.
-//
+// Tutorial followed: https://www.youtube.com/watch?v=cI3Bzmq4EgY
 
 import UIKit
 
