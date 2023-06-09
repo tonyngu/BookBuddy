@@ -7,6 +7,10 @@
 
 import UIKit
 
+struct EmbeddedBookData: Decodable {
+    var bookCover: [BookData]
+}
+
 class BookData: NSObject, Decodable {
     
     var isbn13: String?
@@ -16,12 +20,13 @@ class BookData: NSObject, Decodable {
     var publicationDate: String?
     var bookDescription: String?
     var imageURL: String?
-    var pageCount: String?
-
     
-    //use to track image download
-//    var image: UIImage?
-//    var imageIsDownloading: Bool = false
+    // Used to track image downloads:
+    var image: UIImage?
+    var imageIsDownloading: Bool = false
+    var imageShown = true
+    
+
     
     private enum RootKeys: String, CodingKey {
         case volumeInfo
@@ -35,7 +40,7 @@ class BookData: NSObject, Decodable {
         case authors
         case industryIdentifiers
         case imageLinks
-        case pageCount = "pageCount"
+
 
 
     }
@@ -62,7 +67,7 @@ class BookData: NSObject, Decodable {
             publisher = try? bookContainer.decode(String.self, forKey: .publisher)
             publicationDate = try? bookContainer.decode(String.self, forKey: .publicationDate)
             bookDescription = try? bookContainer.decode(String.self, forKey: .bookDescription)
-            pageCount = try? bookContainer.decode(String.self, forKey: .pageCount)
+
 
 
         // Get the image links container for the thumbnail
