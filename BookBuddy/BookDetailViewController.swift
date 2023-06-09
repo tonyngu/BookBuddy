@@ -32,8 +32,6 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
     @IBOutlet weak var overviewDescriptionView: UILabel!
     @IBOutlet weak var overviewTitileView: UILabel!
     @IBOutlet weak var overviewAuthorView: UILabel!
-    @IBOutlet weak var overviewPageCount: UILabel!
-    
     @IBOutlet weak var BookCoverView: UIImageView!
     
 
@@ -47,13 +45,12 @@ class BookDetailViewController: UIViewController, URLSessionTaskDelegate, URLSes
             overviewDescriptionView.text = book.bookDescription
             overviewTitileView.text = book.title
             overviewAuthorView.text = book.authors
-            overviewPageCount.text = book.pageCount
             
             //To download image from URL
-            let imageURL = book.imageURL
-            let config = URLSessionConfiguration.background(withIdentifier: "edu.monash.fit3178.week05")
+            
+            let config = URLSessionConfiguration.background(withIdentifier: "")
             let session = URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue())
-            let url = URL(string: imageURL!)
+            let url = URL(string: book.imageURL!)
             let task = session.downloadTask(with: url!)
             task.resume()
             
